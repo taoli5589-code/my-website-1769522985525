@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro Elegance - Fine Dining Experience</title>
+    <link rel="stylesheet" href="tooplate-bistro-elegance.css">
+<!--
+
+Tooplate 2148 Bistro Elegance
+
+https://www.tooplate.com/view/2148-bistro-elegance
+
+Free HTML CSS Template
+
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/v4-shims.min.css"><style>
+  /* 方案 B：将 FA4 字体族名 FontAwesome 别名映射到 FA5 Solid 字体文件 */
+  /* 解决 TEMPLATED 等模版使用 font-family: FontAwesome 的兼容问题 */
+  @font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    font-display: block;
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2') format('woff2'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff') format('woff');
+  }
+
+  /* 强制覆盖常用前缀的字体，确保模版样式不干扰 */
+  .fa, .fas, .far, .fab { 
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important; 
+  }
+  .fas { font-weight: 900 !important; }
+  .far { font-weight: 400 !important; }
+
+  /* 兼容 HTML5 UP 等模版：显式将 fab/fas 映射到对应的字体族和权重 */
+  .icon.fab:before { font-family: "Font Awesome 5 Brands" !important; }
+  .icon.fas:before { font-family: "Font Awesome 5 Free" !important; font-weight: 900 !important; }
+  .icon.far:before { font-family: "Font Awesome 5 Free" !important; font-weight: 400 !important; }
+
+  /* 兼容 TEMPLATED 等模版：处理无 fa/fas/fab 前缀的 fa-xxx 类名 */
+  [class*="fa-"]:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):not(.fal):before {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands" !important;
+    font-weight: 900 !important;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 方案 A+：TEMPLATED 模版 .icon.fa-xxx 结构的高特异性覆盖（覆盖模版本地的 FontAwesome 字体定义） */
+  /* 方向1修复：排除 .brands 和 .solid 类，避免覆盖 HTML5 UP 模版的图标样式 */
+  .icon[class*="fa-"]:not(.fa):not(.fas):not(.far):not(.fab):not(.fal):not(.fad):not(.brands):not(.solid):before {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 方案 A+：TEMPLATED 模版品牌图标专项规则（需要 Brands 字体族） */
+  .icon.fa-twitter:before, .icon.fa-facebook:before, .icon.fa-facebook-f:before,
+  .icon.fa-instagram:before, .icon.fa-linkedin:before, .icon.fa-linkedin-in:before,
+  .icon.fa-github:before, .icon.fa-github-alt:before, .icon.fa-dribbble:before,
+  .icon.fa-google-plus:before, .icon.fa-google-plus-g:before, .icon.fa-google:before,
+  .icon.fa-youtube:before, .icon.fa-vimeo:before, .icon.fa-vimeo-v:before,
+  .icon.fa-pinterest:before, .icon.fa-pinterest-p:before, .icon.fa-tumblr:before,
+  .icon.fa-snapchat:before, .icon.fa-snapchat-ghost:before, .icon.fa-whatsapp:before,
+  .icon.fa-telegram:before, .icon.fa-telegram-plane:before, .icon.fa-discord:before,
+  .icon.fa-slack:before, .icon.fa-slack-hash:before, .icon.fa-skype:before,
+  .icon.fa-reddit:before, .icon.fa-reddit-alien:before, .icon.fa-medium:before,
+  .icon.fa-behance:before, .icon.fa-deviantart:before, .icon.fa-flickr:before,
+  .icon.fa-soundcloud:before, .icon.fa-spotify:before, .icon.fa-twitch:before,
+  .icon.fa-steam:before, .icon.fa-xbox:before, .icon.fa-playstation:before,
+  .icon.fa-apple:before, .icon.fa-android:before, .icon.fa-windows:before,
+  .icon.fa-linux:before, .icon.fa-amazon:before, .icon.fa-paypal:before,
+  .icon.fa-stripe:before, .icon.fa-cc-visa:before, .icon.fa-cc-mastercard:before,
+  .icon.fa-btc:before, .icon.fa-ethereum:before, .icon.fa-weibo:before,
+  .icon.fa-weixin:before, .icon.fa-qq:before, .icon.fa-tiktok:before {
+    font-family: "Font Awesome 5 Brands" !important;
+    font-weight: 400 !important;
+  }
+</style></head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-var-keys="svgicon" data-ss-placeholder="svg"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <!-- Plate/Circle -->
+                    <circle cx="20" cy="20" r="18" stroke="#e74c3c" stroke-width="2" fill="none"></circle>
+                    <circle cx="20" cy="20" r="14" stroke="#e74c3c" stroke-width="1" fill="none" opacity="0.5"></circle>
+                    
+                    <!-- Fork -->
+                    <path d="M10 12 L10 20 M8 12 L8 15 M12 12 L12 15 M8 12 L12 12" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    
+                    <!-- Knife -->
+                    <path d="M30 12 L30 20 M28 12 Q28 14 30 14" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                    
+                    <!-- Chef's hat accent -->
+                    <ellipse cx="20" cy="26" rx="6" ry="3" fill="#e74c3c" opacity="0.2"></ellipse>
+                    <path d="M14 26 C14 24 16 22 20 22 C24 22 26 24 26 26" stroke="#e74c3c" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+                    <circle cx="17" cy="24" r="1" fill="#e74c3c" opacity="0.6"></circle>
+                    <circle cx="20" cy="23" r="1" fill="#e74c3c" opacity="0.6"></circle>
+                    <circle cx="23" cy="24" r="1" fill="#e74c3c" opacity="0.6"></circle>
+                </svg></svg>
+                <span>Bist飞飞飞gance</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="diagonal-grid"></div>
+        <div class="static-decoration"></div>
+        <div class="bottom-right-decoration"></div>
+        <div class="hero-content">
+            <h1>Welco哈哈哈 Elegance</h1>
+            <p>Experience culinary excellence in an atmosphere of refined sophistication Discover exquisite flavors crafted with passion and precision Where fine dining meets unforgettable moments</p>
+            <a href="#reservation" class="cta-btn">Res急急急  Table</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Signature Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="photo-1476124369491-e7addf5db371" alt="Truffle Risotto" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Truffle Risotto</h3>
+                    <p>Creamy arborio rice with black truffle, parmesan, and fresh herbs</p>
+                    <div class="price">$32</div>
+                    <button class="ingredients-btn" onclick="showIngredients('truffle-risotto')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="photo-1467003909585-2f8a72700288" alt="Grilled Salmon" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Grilled Salmon</h3>
+                    <p>Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                    <div class="price">$28</div>
+                    <button class="ingredients-btn" onclick="showIngredients('grilled-salmon')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&amp;h=200&amp;fit=crop&amp;crop=center" alt="Beef Wellington" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Beef Wellington</h3>
+                    <p>Premium beef tenderloin wrapped in puff pastry with mushroom duxelles</p>
+                    <div class="price">$45</div>
+                    <button class="ingredients-btn" onclick="showIngredients('beef-wellington')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=400&amp;h=200&amp;fit=crop&amp;crop=center" alt="Lobster Thermidor" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Lobster Thermidor</h3>
+                    <p>Fresh lobster in cognac cream sauce with gruyere cheese</p>
+                    <div class="price">$52</div>
+                    <button class="ingredients-btn" onclick="showIngredients('lobster-thermidor')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&amp;h=200&amp;fit=crop&amp;crop=center" alt="Duck Confit" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Duck Confit</h3>
+                    <p>Slow-cooked duck leg with garlic potatoes and cherry reduction</p>
+                    <div class="price">$38</div>
+                    <button class="ingredients-btn" onclick="showIngredients('duck-confit')">View Ingredients</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&amp;h=200&amp;fit=crop&amp;crop=center" alt="Chocolate Soufflé" class="menu-item-image">
+                <div class="menu-item-content">
+                    <h3>Chocolate Soufflé</h3>
+                    <p>Warm chocolate soufflé with vanilla ice cream and berry coulis</p>
+                    <div class="price">$16</div>
+                    <button class="ingredients-btn" onclick="showIngredients('chocolate-souffle')">View Ingredients</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation">
+        <div class="reservation">
+            <div class="reservation-left">
+                <h2>Make a Reservation</h2>
+                <form class="reservation-form" data-form-id="bistro-elegance-index" data-form-name="Full Name" method="POST" action="https://formspree.io/f/PLACEHOLDER" data-form-placeholder="true" data-form-ajax="true">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select id="time" name="time" required="" data-options="[{&quot;value&quot;:&quot;{{selectOption1}}&quot;,&quot;text&quot;:&quot;{{selectOption1}}&quot;},{&quot;value&quot;:&quot;{{selectValue2}}&quot;,&quot;text&quot;:&quot;{{selectOption2}}&quot;},{&quot;value&quot;:&quot;{{selectValue3}}&quot;,&quot;text&quot;:&quot;{{selectOption3}}&quot;},{&quot;value&quot;:&quot;{{selectValue4}}&quot;,&quot;text&quot;:&quot;{{selectOption4}}&quot;},{&quot;value&quot;:&quot;{{selectValue5}}&quot;,&quot;text&quot;:&quot;{{selectOption5}}&quot;},{&quot;value&quot;:&quot;{{selectValue6}}&quot;,&quot;text&quot;:&quot;{{selectOption6}}&quot;},{&quot;value&quot;:&quot;{{selectValue7}}&quot;,&quot;text&quot;:&quot;{{selectOption7}}&quot;},{&quot;value&quot;:&quot;{{selectValue8}}&quot;,&quot;text&quot;:&quot;{{selectOption8}}&quot;},{&quot;value&quot;:&quot;{{selectValue9}}&quot;,&quot;text&quot;:&quot;{{selectOption9}}&quot;},{&quot;value&quot;:&quot;{{selectValue10}}&quot;,&quot;text&quot;:&quot;{{selectOption10}}&quot;}]">
+                            <option value="">Select Time</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="17:30">5:30 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" name="guests" required="" data-options="[{&quot;value&quot;:&quot;{{selectOption11}}&quot;,&quot;text&quot;:&quot;{{selectOption11}}&quot;},{&quot;value&quot;:&quot;{{selectValue21}}&quot;,&quot;text&quot;:&quot;{{selectOption21}}&quot;},{&quot;value&quot;:&quot;{{selectValue31}}&quot;,&quot;text&quot;:&quot;{{selectOption31}}&quot;},{&quot;value&quot;:&quot;{{selectValue41}}&quot;,&quot;text&quot;:&quot;{{selectOption41}}&quot;},{&quot;value&quot;:&quot;{{selectValue51}}&quot;,&quot;text&quot;:&quot;{{selectOption51}}&quot;},{&quot;value&quot;:&quot;{{selectValue61}}&quot;,&quot;text&quot;:&quot;{{selectOption61}}&quot;},{&quot;value&quot;:&quot;{{selectValue71}}&quot;,&quot;text&quot;:&quot;{{selectOption71}}&quot;},{&quot;value&quot;:&quot;{{selectValue81}}&quot;,&quot;text&quot;:&quot;{{selectOption81}}&quot;},{&quot;value&quot;:&quot;{{selectValue91}}&quot;,&quot;text&quot;:&quot;{{selectOption91}}&quot;}]">
+                            <option value="">Select Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="special">Special Requests</label>
+                        <textarea id="special" name="special" rows="5" placeholder="Any dietary restrictions or special occasions?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Reserve Table</button>
+                <input type="hidden" name="_subject" value="New message from bistro-elegance-index"><input type="hidden" name="_replyto" data-form-replyto="true" value=""><input type="text" name="_gotcha" autocomplete="off" tabindex="-1" style="position:absolute;left:-5000px;height:0;width:0;opacity:0;pointer-events:none;"><div class="form-status" data-form-status="idle" aria-hidden="true" data-placeholder-message="Message channel not configured. Please fill in the Formspree Endpoint." data-success-message="Thank you! Your message has been sent." data-error-message="Submission failed. Please try again later." data-submitting-message="Sending your message..." style="display: none;"></div></form>
+            </div>
+            <div class="reservation-right">
+                <img src="photo-1517248135467-4c7edcad34c4" alt="Restaurant Interior" class="reservation-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Culinary Street<br>Gourmet District, GD 12345<br>Phone: (555) 123-4567<br>Email:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2940474f46694b405a5d5b464c454c4e48474a4c074a4644">[email&nbsp;protected]</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Opening Hours</h3>
+                <p>Monday - Thursday: 5:00 PM - 10:00 PM
+Friday - Saturday: 5:00 PM - 11:00 PM
+Sunday: 5:00 PM - 9:00 PM
+Closed on major holidays</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p><a href="#">Facebook</a><br>
+                <a href="#">Instagram</a><br>
+                <a href="#">Twitter</a><br>
+                <a href="#">LinkedIn</a></p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #555; text-align: center;">
+            <p>© 2026 Bistro Elegance. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">Terms &amp; Conditions</a>
+                <span>|</span>
+                <a href="#">Sitemap</a>
+                <span>|</span>
+                <a rel="nofollow noopener" href="https://www.tooplate.com" target="_blank">Designed by Tooplate</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ingredients Modal -->
+    <div id="ingredientsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h3 id="modalTitle">Dish Ingredients</h3>
+            <ul id="ingredientsList" class="ingredient-list"></ul>
+        </div>
+    </div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="tooplate-bistro-scripts.js"></script>
+
+<script id="ss-form-placeholder-guard">(function() {
+  if (window.__SS_FORM_GUARD__) {
+    return;
+  }
+  window.__SS_FORM_GUARD__ = true;
+  var PLACEHOLDER = "https://formspree.io/f/PLACEHOLDER";
+  var DEFAULT_SUCCESS = "Thank you! Your message has been sent.";
+  var DEFAULT_ERROR = "Submission failed. Please try again later.";
+  var DEFAULT_PLACEHOLDER = "Message channel not configured. Please fill in the Formspree Endpoint.";
+  var DEFAULT_SUBMITTING = "Sending your message...";
+  var MISSING_ID_MESSAGE = '表单 data-form-id 值为空，请重新导入模板或联系支持。';
+  var EDITOR_BLOCK_MESSAGE = '编辑页仅用于配置 Formspree，请点击“预览”后在新标签页内测试表单。';
+  var REQUIRED_FIELD_MESSAGE = '请完整填写表单中的每一项（如 Name/Email/Message）后再提交。';
+
+  function getStatusElement(form) {
+    if (!form || typeof form.querySelector !== 'function') return null;
+    return form.querySelector('[data-form-status]');
+  }
+
+  function getPlaceholderMessage(statusEl) {
+    if (!statusEl) return DEFAULT_PLACEHOLDER;
+    return statusEl.getAttribute('data-placeholder-message') || statusEl.textContent || DEFAULT_PLACEHOLDER;
+  }
+
+  function getSuccessMessage(statusEl) {
+    if (!statusEl) return DEFAULT_SUCCESS;
+    return statusEl.getAttribute('data-success-message') || DEFAULT_SUCCESS;
+  }
+
+  function getErrorMessage(statusEl) {
+    if (!statusEl) return DEFAULT_ERROR;
+    return statusEl.getAttribute('data-error-message') || DEFAULT_ERROR;
+  }
+
+  function getSubmittingMessage(statusEl) {
+    if (!statusEl) return DEFAULT_SUBMITTING;
+    return statusEl.getAttribute('data-submitting-message') || DEFAULT_SUBMITTING;
+  }
+
+  function updateStatus(statusEl, message, state) {
+    if (!statusEl) return;
+    statusEl.setAttribute('data-form-status', state || 'error');
+  }
+
+  function notifyStatus(form, status, message) {
+    if (!message) return;
+    var payload = {
+      type: 'FORM_STATUS',
+      status: status,
+      formId: (form && form.getAttribute && form.getAttribute('data-form-id')) || '',
+      message: message
+    };
+    if (window.parent && window.parent !== window && typeof window.parent.postMessage === 'function') {
+      try {
+        window.parent.postMessage(payload, window.location.origin);
+        return;
+      } catch (err) {
+        /* ignore */
+      }
+    }
+    try {
+      alert(message);
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function isEditorContext() {
+    var attr = ''
+    try {
+      attr = (document.documentElement && document.documentElement.getAttribute('data-ss-render-context')) || ''
+    } catch (err) {
+      attr = ''
+    }
+    if (attr === 'editor') {
+      return true
+    }
+    if (attr === 'preview') {
+      return false
+    }
+    try {
+      if (window.parent && window.parent !== window) {
+        return true
+      }
+    } catch (err2) {
+      /* ignore */
+    }
+    return false
+  }
+
+  function getFieldType(field) {
+    if (!field) return ''
+    var attr = (field.getAttribute && field.getAttribute('type')) || ''
+    if (attr) return attr.toLowerCase()
+    if (typeof field.type === 'string') {
+      return field.type.toLowerCase()
+    }
+    return ''
+  }
+
+  function shouldSkipField(field) {
+    if (!field) return true
+    if (field.disabled) return true
+    var tag = (field.tagName || '').toLowerCase()
+    if (tag === 'button') return true
+    var type = getFieldType(field)
+    if (type === 'hidden' || type === 'submit' || type === 'button' || type === 'reset' || type === 'image' || type === 'file') {
+      return true
+    }
+    var name = (field.getAttribute('name') || '').toLowerCase()
+    if (name === '_gotcha') return true
+    if (field.hasAttribute && field.hasAttribute('data-form-ignore')) return true
+    return false
+  }
+
+  function fieldRequiresValue(field) {
+    if (!field) return false
+    // ✅ 统一尊重 HTML 原生 required 属性和自定义 data-form-required
+    // 移除硬编码的必填字段类型，适配订餐/预约等多样化场景
+    if (field.hasAttribute && field.hasAttribute('required')) {
+      return true
+    }
+    if (field.getAttribute && field.getAttribute('data-form-required') === 'true') {
+      return true
+    }
+    return false
+  }
+
+  function radioGroupHasSelection(form, field) {
+    if (!field) return true
+    var name = field.getAttribute('name')
+    if (!name) {
+      return !!field.checked
+    }
+    var radios = (form && typeof form.querySelectorAll === 'function')
+      ? form.querySelectorAll('input[type="radio"]')
+      : document.querySelectorAll('input[type="radio"]')
+    for (var i = 0; i < radios.length; i++) {
+      var radio = radios[i]
+      if (!radio || radio.getAttribute('name') !== name) continue
+      if (radio.checked) {
+        return true
+      }
+    }
+    return false
+  }
+
+  function isFieldEmpty(form, field) {
+    var tag = (field.tagName || '').toLowerCase()
+    var type = (field.getAttribute('type') || '').toLowerCase()
+    if (type === 'checkbox') {
+      return !field.checked
+    }
+    if (type === 'radio') {
+      return !radioGroupHasSelection(form, field)
+    }
+    if (tag === 'select') {
+      if (field.multiple && field.options) {
+        for (var i = 0; i < field.options.length; i++) {
+          var opt = field.options[i]
+          if (opt.selected && String(opt.value || '').trim().length > 0) {
+            return false
+          }
+        }
+        return true
+      }
+      var selectValue = field.value != null ? String(field.value) : ''
+      return selectValue.trim().length === 0
+    }
+    var value = field.value != null ? String(field.value) : ''
+    return value.trim().length === 0
+  }
+
+  function getFieldLabel(form, field) {
+    if (!field) return ''
+    var direct = (field.getAttribute('data-label') ||
+      field.getAttribute('aria-label') ||
+      field.getAttribute('placeholder') ||
+      field.getAttribute('name') ||
+      field.getAttribute('id') ||
+      '').trim()
+    if (direct) {
+      return direct
+    }
+    var id = field.getAttribute('id')
+    if (id && form && typeof form.querySelectorAll === 'function') {
+      var labels = form.querySelectorAll('label[for]')
+      for (var i = 0; i < labels.length; i++) {
+        var lbl = labels[i]
+        if (lbl && lbl.getAttribute('for') === id) {
+          var text = (lbl.textContent || '').trim()
+          if (text) return text
+        }
+      }
+    }
+    if (field.closest) {
+      var wrapping = field.closest('label')
+      if (wrapping) {
+        var wrapText = (wrapping.textContent || '').trim()
+        if (wrapText) return wrapText
+      }
+    }
+    return ''
+  }
+
+  function buildMissingFieldMessage(form, field) {
+    var label = getFieldLabel(form, field)
+    if (label) {
+      return '请填写“' + label + '”后再提交表单。'
+    }
+    return REQUIRED_FIELD_MESSAGE
+  }
+
+  function validateRequiredFields(form) {
+    if (!form || typeof form.querySelectorAll !== 'function') {
+      return { valid: true }
+    }
+    var fields = form.querySelectorAll('input, textarea, select')
+    for (var i = 0; i < fields.length; i++) {
+      var field = fields[i]
+      if (shouldSkipField(field)) continue
+      if (!fieldRequiresValue(field)) continue
+      if (isFieldEmpty(form, field)) {
+        return {
+          valid: false,
+          message: buildMissingFieldMessage(form, field)
+        }
+      }
+    }
+    return { valid: true }
+  }
+
+  async function submitViaAjax(form, action, statusEl) {
+    updateStatus(statusEl, getSubmittingMessage(statusEl), 'submitting');
+    var formData = new FormData(form);
+    try {
+      var response = await fetch(action, {
+        method: (form.getAttribute('method') || 'POST').toUpperCase(),
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (response.ok) {
+        // ✅ 在 reset 之前收集所有字段
+        var fields = [];
+        var userName = '';
+        var userEmail = '';
+        try {
+          formData.forEach(function(value, key) {
+            // 跳过隐藏字段和 _gotcha
+            if (key.startsWith('_') || key === '_gotcha') return;
+            var strValue = String(value).trim();
+            if (!strValue) return;
+            
+            // 提取姓名和邮箱用于个性化
+            var keyLower = key.toLowerCase();
+            if (!userName && (keyLower === 'name' || keyLower === 'fullname' || keyLower === 'full_name')) {
+              userName = strValue;
+            }
+            if (!userEmail && (keyLower === 'email' || keyLower.indexOf('email') !== -1)) {
+              userEmail = strValue;
+            }
+            
+            // 格式化字段名（snake_case/camelCase 转可读格式）
+            var label = key.replace(/[_-]/g, ' ')
+                           .replace(/([a-z])([A-Z])/g, '$1 $2')
+                           .replace(/\b[a-z]/g, function(c) { return c.toUpperCase(); });
+            // 字段长度限制50字符
+            var displayValue = strValue.length > 50 ? strValue.substring(0, 47) + '...' : strValue;
+            fields.push(label + ': ' + displayValue);
+          });
+        } catch (e) { /* ignore */ }
+        
+        try { form.reset(); } catch (resetErr) { console.warn('[Formspree] reset failed', resetErr); }
+        
+        // 构建个性化消息
+        var successText = userName ? ('Thank you, ' + userName + '!
+
+') : 'Thank you!
+
+';
+        successText += 'We have received your submission:
+';
+        successText += '─────────────────────
+';
+        successText += fields.join('
+');
+        successText += '
+─────────────────────';
+        if (userEmail) {
+          successText += '
+
+A confirmation will be sent to ' + userEmail + '.';
+        }
+        
+        updateStatus(statusEl, successText, 'success');
+        notifyStatus(form, 'success', successText);
+        return;
+      }
+
+      var errorText = getErrorMessage(statusEl);
+      try {
+        var payload = await response.json();
+        if (payload && payload.errors && payload.errors.length) {
+          errorText = payload.errors.map(function(err) { return err.message; }).join(', ');
+        }
+      } catch (_) {
+        // ignore
+      }
+      updateStatus(statusEl, errorText, 'error');
+      notifyStatus(form, 'error', errorText);
+    } catch (err) {
+      var fallbackError = getErrorMessage(statusEl);
+      updateStatus(statusEl, fallbackError, 'error');
+      notifyStatus(form, 'error', fallbackError);
+    }
+  }
+
+  document.addEventListener('submit', function(event) {
+    var form = event.target;
+    if (!form || form.tagName !== 'FORM') {
+      return;
+    }
+    var action = (form.getAttribute('action') || '').trim();
+    var statusEl = getStatusElement(form);
+    var formId = (form.getAttribute('data-form-id') || '').trim();
+    if (!formId) {
+      event.preventDefault();
+      updateStatus(statusEl, MISSING_ID_MESSAGE, 'error');
+      notifyStatus(form, 'invalid', MISSING_ID_MESSAGE);
+      return;
+    }
+    if (!action || action.indexOf('PLACEHOLDER') !== -1) {
+      event.preventDefault();
+      var placeholderMessage = getPlaceholderMessage(statusEl);
+      updateStatus(statusEl, placeholderMessage, 'error');
+      notifyStatus(form, 'placeholder', placeholderMessage);
+      return;
+    }
+    if (isEditorContext()) {
+      event.preventDefault();
+      updateStatus(statusEl, EDITOR_BLOCK_MESSAGE, 'blocked');
+      notifyStatus(form, 'blocked', EDITOR_BLOCK_MESSAGE);
+      return;
+    }
+
+    var validation = validateRequiredFields(form);
+    if (!validation.valid) {
+      event.preventDefault();
+      var validationMessage = validation.message || REQUIRED_FIELD_MESSAGE;
+      updateStatus(statusEl, validationMessage, 'invalid');
+      notifyStatus(form, 'invalid', validationMessage);
+      return;
+    }
+
+    var emailField = form.querySelector('input[type="email"], input[data-form-email="true"]');
+    var replyField = form.querySelector('input[name="_replyto"]');
+    if (emailField && replyField) {
+      replyField.value = emailField.value || '';
+    }
+
+    if (form.getAttribute('data-form-ajax') === 'false') {
+      return;
+    }
+
+    event.preventDefault();
+    submitViaAjax(form, action, statusEl);
+  }, true);
+})();</script></body></html>
